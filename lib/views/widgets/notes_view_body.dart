@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/views/widgets/custom_note_item.dart';
+import 'package:notes_app/views/widgets/notes_list_view.dart';
 
 import 'custom_app_bar.dart';
 
@@ -16,8 +16,12 @@ class NotesViewBody extends StatelessWidget {
           SizedBox(
             height: 50,
           ),
-          CustomAppBar(),
-          NoteItem(),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 18),
+            child: CustomAppBar(),
+          ),
+          //عشان تتوزع علي كل المساحة للشاشة وميحصلش ايرور
+          Expanded(child: NotesListView()),
         ],
       ),
     );
