@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/views/notes_view.dart';
+
+import 'views/notes_view.dart';
 
 void main() {
   runApp(const NotesApp());
@@ -12,7 +13,11 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //(brightness: Brightness.dark)هذه افضل من .dart فقط لانها بتغير في تكوين Theme
-      theme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        //الخط اللي هنستخدمه في التطبيق كله
+        fontFamily: 'Poppins',
+      ),
       home: const NotesView(),
     );
   }
