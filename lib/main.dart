@@ -12,6 +12,8 @@ class NotesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //لازال علامة debug
+      debugShowCheckedModeBanner: false,
       //(brightness: Brightness.dark)هذه افضل من .dart فقط لانها بتغير في تكوين Theme
       theme: ThemeData(
         brightness: Brightness.dark,

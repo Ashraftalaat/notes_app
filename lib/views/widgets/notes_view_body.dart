@@ -21,7 +21,9 @@ class NotesViewBody extends StatelessWidget {
             child: CustomAppBar(),
           ),
           //عشان تتوزع علي كل المساحة للشاشة وميحصلش ايرور
-          Expanded(child: NotesListView()),
+          Expanded(
+            child: NotesListView(),
+          ),
         ],
       ),
     );
