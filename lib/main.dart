@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:notes_app/constants.dart';
 
 import 'views/notes_view.dart';
 
-void main() {
+//ادخال Hive
+void main() async {
+  await Hive.initFlutter();
+//هنخزن البيانات في box او كولكشن في المستقبل
+  await Hive.openBox(kNotesBox);
+
   runApp(const NotesApp());
 }
 
