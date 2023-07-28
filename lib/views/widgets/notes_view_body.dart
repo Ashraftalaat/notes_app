@@ -18,7 +18,10 @@ class NotesViewBody extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 18),
-            child: CustomAppBar(),
+            child: CustomAppBar(
+              title: 'Notes',
+              icon: Icons.search,
+            ),
           ),
           //عشان تتوزع علي كل المساحة للشاشة وميحصلش ايرور
           Expanded(
