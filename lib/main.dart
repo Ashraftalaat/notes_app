@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app/constants.dart';
+import 'package:notes_app/models/note_model.dart';
 
 import 'views/notes_view.dart';
 
@@ -8,8 +9,13 @@ import 'views/notes_view.dart';
 void main() async {
   await Hive.initFlutter();
 //هنخزن البيانات في box او كولكشن في المستقبل
+//وبنقول لhive خزني بيانات من NoteModel
   await Hive.openBox(kNotesBox);
-
+  //(1) بنعمل model
+  //(2)بنعمل adapter لل model
+  //(3)بنخزن modelAdapter في hive
+  //بنقوله عايز اخزن NoteModelAdapter
+  Hive.registerAdapter(NoteModelAdapter());
   runApp(const NotesApp());
 }
 
