@@ -41,6 +41,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
   String? title, subTitle;
   @override
   Widget build(BuildContext context) {
+    //عشان نشغل الحالة اللي عليها الفورم ونحفظ الداتا
     return Form(
       key: formkey,
       autovalidateMode: autovalidateMode,

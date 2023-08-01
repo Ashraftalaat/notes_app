@@ -29,12 +29,15 @@ class CustomTextField extends StatelessWidget {
         hintText: hint,
         hintStyle: const TextStyle(color: kPrimaryColor),
         border: buildBorder(),
+        //شكل البوردر في حالة ظهوره بدون الضغط علية
         enabledBorder: buildBorder(),
+        //في حالة الضغط علية
         focusedBorder: buildBorder(kPrimaryColor),
       ),
     );
   }
 
+//   الشكل العام للborder
   OutlineInputBorder buildBorder([Color]) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(16),

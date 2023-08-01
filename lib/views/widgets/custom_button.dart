@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        //بنديها العرض بتاع اي شاشة باستخدام MediaQuery.of(context
+        //بنديها العرض بتاع اي شاشة موبايل باستخدام MediaQuery.of(context
         //حيث استخدام double.infinity بيسبب مشاكل في بعض الاماكن
         //لاننا بنقوله خد علي قد ماتقدر من المساحة المتوفرة
         width: MediaQuery.of(context).size.width,
