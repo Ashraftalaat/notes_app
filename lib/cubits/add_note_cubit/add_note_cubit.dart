@@ -21,3 +21,4 @@ class AddNoteCubit extends Cubit<AddNoteState> {
     }
   }
 }
+// خطوة التالية هنعمل blocprovider في main
