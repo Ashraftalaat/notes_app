@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app/constants.dart';
+import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 
 import 'views/notes_view.dart';
@@ -24,16 +26,24 @@ class NotesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      //لازال علامة debug
-      debugShowCheckedModeBanner: false,
-      //(brightness: Brightness.dark)هذه افضل من .dart فقط لانها بتغير في تكوين Theme
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        //الخط اللي هنستخدمه في التطبيق كله
-        fontFamily: 'Poppins',
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => AddNoteCubit(),
+          child: Container(),
+        )
+      ],
+      child: MaterialApp(
+        //لازال علامة debug
+        debugShowCheckedModeBanner: false,
+        //(brightness: Brightness.dark)هذه افضل من .dart فقط لانها بتغير في تكوين Theme
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          //الخط اللي هنستخدمه في التطبيق كله
+          fontFamily: 'Poppins',
+        ),
+        home: const NotesView(),
       ),
-      home: const NotesView(),
     );
   }
 }
